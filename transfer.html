@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Transfer</title>
+    <link rel="shortcut icon" href="resources/bank.png">
+    <script src="banking.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="table-title mb-4">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1>Transfer money Information</h1>
+                </div>
+                <div class="col-sm-7">
+                    <a class="btn btn-outline-light" href="index.html">
+                        <i class="fa fa-list"></i>
+                        <span>List of customers</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form id="frmTransfer" method="post" novalidate="novalidate">
+            <fieldset class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label">Sender ID</label>
+                    <input class="form-control" type="text" name="senderID" id="senderID" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Sender Name</label>
+                    <input class="form-control" type="text" name="senderName" id="senderName" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Sender balance</label>
+                    <input class="form-control" type="text" name="senderBalance" id="senderBalance" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label for="recipientName" class="form-label">Recipient Name</label>
+                    <input class="form-control" type="text" name="recipientName" id="recipientName">
+                </div>
+                <div class="col-md-3">
+                    <label for="transferAmount" class="form-label">Transfer Amount ($)</label>
+                    <input class="form-control" type="text" name="transferAmount" id="transferAmount">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Fees (%)</label>
+                    <input class="form-control" type="text" name="fees" id="fees" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Total amount of transaction ($)</label>
+                    <input class="form-control" type="text" name="totalTransaction" id="totalTransaction" readonly>
+                </div>
+                <div class="col-md-12">
+                    <button id="btnCrtNewCus" class="btn btn-outline-primary" type="submit">
+                        <i class="fa fa-exchange"></i>
+                        Transfer
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
